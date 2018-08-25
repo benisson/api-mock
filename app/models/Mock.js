@@ -8,7 +8,12 @@ var schema = mongoose.Schema({
     response: {
         required: true,
         type: String,
+    },
+    date:{
+        require:true,
+        type:Date
     }
+
 
 });
 

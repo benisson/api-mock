@@ -11,6 +11,9 @@ services:
         build:
             context: .
             dockerfile: /app/Dockerfile
+        volumes:
+            - ./app:/var/www/
+            - /var/www/node_modules
         ports:
             - "3000:3000"
         image: benisson/api-mock
