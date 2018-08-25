@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  mongo-db:
+          image: mongo
+          volumes:
+              - './data:/data/db'
+          networks: 
+              - network-api-mock
+  node:
+        build:
+            context: .
+            dockerfile: /app/Dockerfile
+        ports:
+            - "3000:3000"
+        image: benisson/api-mock
+        container_name: api-mock-container
+        networks: 
+            - network-api-mock
+        depends_on:
+            - "mongo-db"
+    
+networks: 
+    network-api-mock:
+        driver: bridge

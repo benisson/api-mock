@@ -1,0 +1,6 @@
+{   
+    "databaseConfig":{
+        "host": "mongo-db",
+        "database": "api-mock-db"
+    }
+}
