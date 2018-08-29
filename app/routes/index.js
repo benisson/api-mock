@@ -45,9 +45,10 @@ router.get('/delete-all', (req, res) => {
     })
 })
 
-// Seed nos arquivos
+
 router.post('/incluir', (req, res) => {
     const id = req.body.id;
+ 
     Dao.consultar(id)
        .then(response => {
 

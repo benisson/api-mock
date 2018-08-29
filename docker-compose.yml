@@ -10,7 +10,7 @@ services:
   node:
         build:
             context: .
-            dockerfile: /app/Dockerfile
+            dockerfile: ./app/Dockerfile
         volumes:
             - ./app:/var/www/
             - /var/www/node_modules
